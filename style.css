@@ -1,0 +1,174 @@
+body{
+  font-family: "Open sans",sans-serif;
+  color: #000000;
+}
+a{
+  color: #ADEFD1FF;
+  text-decoration: none!important;
+}
+a:hover{
+  color: #ADEFD1FF;
+  text-decoration: none!important;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Roboto",sans-serif;
+}
+
+#header{
+  background: #00202FFF;      /*DARK BLUE*/
+  padding: 15px 0px;
+  
+    width: auto;
+   
+    /*width:90%; */
+    height: auto;
+    margin: auto;
+
+}
+h1 {
+  font-family: Stanley Personal Use;
+ color: rgba(255,255,255,0.7);
+margin-left: -50px;
+  white-space: nowrap;
+  letter-spacing: 1px;
+font
+}     
+
+                                              /*.....h1 starthover*/
+h1::before{
+   position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+h1:hover::before {
+  -webkit-animation: shine 2s;
+  animation: shine 2s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }                                    /* ....h1 end hover*/ 
+}
+
+
+                        /* *******/
+.nav-menu ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 350px;
+}
+
+.nav-menu > ul{
+  display: flex;
+}
+.nav-menu > ul > li{
+  position: relative;
+  white-space: nowrap;
+  padding: 7px 0 7px 20px;
+ }
+ .nav-menu a{
+  display: block;
+  position: relative;
+  color: rgba(255,255,255,0.7);
+  transition:0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto",sans-serif;
+  padding: 0 4px;
+  text-transform: uppercase;
+ }
+.nav-menu > ul > li a::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #ADEFD1FF;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out;
+}
+.nav-menu a:hover::before,
+.nav-menu li:hover > a::before,
+.nav-menu .active > a::before{
+  visibility: visible;
+  width: 100%;
+}
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a{
+color: #fff;
+  }
+
+  .get-started-btn{
+    margin-left: 25px;
+    color: #fff;
+    border-radius: 4px;
+    padding: 6px 25px 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 13px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Poppins",sans-serif;
+    border: 2px solid #ADEFD1FF;     
+  }
+
+  .get-started-btn:hover{
+    background-color:rgba(173, 239, 209, .5);
+    opacity: .3px;
+    color: #fff;
+  }
+
+
+  /*Responsive*/
+  @media(max-width: 768px){
+    .get-started-btn{
+      margin: 0 48px 0 0;
+      padding: 6px 18px;
+      margin-left: ;
+    }
+  }
+  .toggle {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.3s;
+  margin-left: 70px;
+}
+
+  .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -4px);
+  transform: rotate(45deg) translate(-7px, -4px);
+}
+
